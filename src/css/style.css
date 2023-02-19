@@ -1,0 +1,354 @@
+*{
+    box-sizing: border-box;/* отвечает за правильное отображение всех margin и padding */
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 1140px;
+    margin: 0 auto;/*выравниваю свой блочный элемент по центру*/
+    position: relative;
+}
+
+.promo{
+    padding: 39px 0px 62px 0px;/*задаю внутренние отступы для всех моих элементов сверху справа снизу слева*/
+    height: 800px;/*cover использую для того чтобы изображение растянулась если оно маленькое, а no-repeat для того чтобы не повторялось*/
+    background: url('../img/main.jpg') center center / cover no-repeat;/*ce ter center написал чтобы по оси y и x выравнять изображение по центру*/
+}/*слеш нужен для разделения свойст центер и ковер если его не будет то картинка не будет отображаться */
+
+.logo .logo_img{/*наследование что в блоке с таким классом находится блок с таким*/
+    display: block;/*делаю картинку блочной так как margin 0 auto не работает на строчные элементы*/
+    margin: 0 auto; /*выровнял!*/
+    height: 71px;
+    width: 83px;
+} 
+
+.logo .logo_text{
+    font-family: Roboto;
+    color:  #ffff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;/*для трансформирования текста с большой строки*/
+    text-align: center;/*выравниваем текст по центру*/
+    margin-top: 14px;
+}
+
+.title{
+    color:#f9bf3b;
+    font-size: 41px;
+    font-weight: 900;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+h1{
+    margin-top: 53px;
+}
+
+.simple .title_big{
+    color:#ffff;
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+
+}
+.promo .promo_text{
+    font-style: normal;
+    font-weight: 300;
+    width: 1144px;
+    font-size: 21px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    padding:  0 13px;
+    margin-top: 23px;
+
+}
+.promo .promo_text span{
+    font-weight: 700;
+    color:#f9bf3b;
+}
+
+.promo .promo_btn, .gift .gift_button{
+    width: 313px;
+    height: 72px;
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.18);/*inset Означает что тень внутрь падает -5 смещение по оси у, 0 размытие нашей тени дальше идут цвета */
+    border: 4px solid rgba(0, 0, 0, 0.23);
+    padding: 5px;
+    display: block;
+    margin: 73px auto;/*по вертикали сверху снизу 73 пикселя а по бокам выравнивание*/
+    background-image: linear-gradient(to top,#2798b9 0%, #3ab6da 100%);
+
+    font-family: 'Roboto Condensed';
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 24px;
+    cursor: pointer;/*анимация курсора*/
+    outline: none;/*убирает обводку которая должна появляться при наведении*/
+}
+
+.more{
+    margin-top: 71px;
+}
+.more .more_text{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Roboto-Thin";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+.more .more_img{
+    display:block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.waiting{/*стилизовали секцию отсупы для контента который внутри него*/
+    background-color: #EFEFEF;
+    min-height: 607px;
+    padding-top: 88px;
+    padding-bottom: 75px;
+}
+.waiting .waiting_header, .finish .finish_header, .when .when_text{/*стилизовал заголовок*/
+    color: #252525;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.finish .finish_header{
+    color:#FFFFFF;
+}
+
+.waiting .waiting_divider, .finish .finish_devider{
+    width: 220px;
+    height: 7px;
+    background: #F9BF3B;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+
+.waiting .waiting_subheader{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    margin-top: 18px;
+    text-align: center;
+
+    color: #4A4A4A;
+}
+
+.waiting .wating_wrapper{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.waiting .waiting_item{
+    display: inline-block;/*делаю элементы строчно блочными чтобы выстроить их в  линию*/
+    vertical-align: top;/*выравниваю все эелементы по врху*/
+    width: 342px;
+    text-align: center;
+    margin: 0 ;/*по центру сделал чтобы каждый имел отсуп в середине*/
+}
+
+.waiting .waiting_item .waiting_img{
+    width: 100%;
+}
+
+.waiting .waiting_item  .waiting_descr{
+    width: 100%;
+    margin-top: 33px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    color: #4A4A4A;
+}
+
+.optimization{
+    min-height: 550px;
+    padding: 102px 0 107px 0;/*сверху отступ справа снизу слева */
+    
+}
+
+.optimization .optimization_header{
+    margin-left: 391px;
+    color: #299CBD;
+    font-family: 'Roboto';
+    font-size: 29px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/*maring используем для того чтобы внутри объекта пустотму не создавать а делать отступы иммено снаружи*/
+.optimization .optimization_text{
+    margin-left: 391px;
+    margin-top: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 27px;
+    color: #4A4A4A;
+    z-index: 2;
+    
+}
+
+.optimization .optimization_text span{
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+}
+.optimization .optimization_img{
+    position: absolute;
+    top: -54px;
+    left: -240px;
+    z-index: -1;
+}
+
+.finish{
+    min-height: 447px;
+    padding: 86px 0 79px 0;
+    background: url("../img/second_bg.jpg") center center / cover no-repeat;/*выходим из папки css*/
+}
+
+.finish .finish_wrapper{
+    
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finish .finish_wrapper .finish_item{
+    width: 204px;
+}
+
+.finish .finish_wrapper .finish_item .finish_round{
+    width: 118px;
+    height: 118px;
+    margin: 0 auto;
+    background-color:#b4e2ff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.finish .finish_wrapper .finish_item .finish_descr{
+    margin-top: 25px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    color: #EFEFEF;
+} 
+
+.gift{
+    padding-top: 85px;
+    padding-bottom: 88px;
+    background:#EFEFEF;
+    min-height: 631px;;
+}
+
+.gift .gift_img{
+    display: block;
+    margin: 0 auto;
+}
+
+.gift .gift_text{
+    margin-top: 45px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+    text-align: center;
+    color: #252525;
+}
+
+.gift .gift_button{
+    margin-top: 51px;
+}
+
+.when{
+    padding-top: 80px;
+    padding-bottom: 52px;
+    text-align: center;
+    min-height: 512px;
+}
+.when .when_block{
+    margin: 0 auto;
+    width: 577px;
+    height: 433px;
+}
+.when .when_block .when_img{
+    display: block;
+    margin: 0 auto;
+}
+
+.when .when_block .when_descr{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 20px;
+    color: #4A4A4A;
+    margin-top: 24px;
+}
+.when .when_block .when_text{
+    margin-top: 36px;
+}
+
+.when .when_block .when_header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    color: #299CBD;
+}
+
+.footer{
+    padding: 58px 0 70px 0;
+    width: 100%;
+    height: 169px;
+    background: #1A1A1A;
+}
+
+.footer .footer_mainInfo, .footer_anotherInfo, a{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+
+
+    color: #888888;
+}
+
+.footer .footer_mainInfo .footer_links{
+    
+    text-decoration-line: underline;
+}
+
+.footer .footer_mainInfo .devider{
+    margin: 0 4px 0 4px;
+}
